@@ -14,7 +14,6 @@ do{
     $companyList = $res->result;
 
     foreach($companyList as $company){
-        $rq = new Requests;
         $arParams = [
             "id"=> $company->ID
         ];
@@ -24,7 +23,6 @@ do{
 while(count($companyList)>0);
 
 do{
-    $rq = new Requests;
     $arParams = [
         "order"=>["ID"=> "ASC" ],
         "filter"=>[">ID"=>"0"],
@@ -35,7 +33,6 @@ do{
     $contactList = $res->result;
 
     foreach($contactList as $contact){
-        $rq = new Requests;
         $arParams = [
             "id"=> $contact->ID
         ];

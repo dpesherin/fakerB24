@@ -14,7 +14,6 @@ do{
     $dealList = $res->result;
 
     foreach($dealList as $deal){
-        $rq = new Requests;
         $arParams = [
             "id"=> $deal->ID
         ];

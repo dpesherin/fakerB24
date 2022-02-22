@@ -17,7 +17,6 @@ $res = $rq->makeRq($arParams, 'crm.status.list.json');
 $stageList = $res->result;
 $stageCount = count($stageList);
 
-$rq = new Requests;
 $arParams = [
     "order"=>["ID"=> "ASC" ],
     "filter"=>[">ID"=>"0"],
@@ -64,7 +63,6 @@ for($i=1; $i<=$count; $i++){
         ]
     ];
 
-     $rq = new Requests;
      $res = $rq->makeRq($arParams, 'crm.deal.add');
      $dealID = $res->result;
 
@@ -82,7 +80,6 @@ for($i=1; $i<=$count; $i++){
             ]
         ];
 
-        $rq = new Requests;
         $res = $rq->makeRq($arParams, 'crm.deal.update');
     }
 }

@@ -59,7 +59,6 @@ class Faker{
     
             $fakeContact = json_decode(curl_exec($curl), true);
 
-            $rq = new Requests;
             $arParams = [
                 "fields"=>[
                     "NAME"=> $fakeContact["FirstName"], 
@@ -73,7 +72,6 @@ class Faker{
             $contact = $rq->makeRq($arParams, 'crm.contact.add.json');
             $newContactID = $contact->result;
 
-            $rq = new Requests;
             $arParams = [
                 "id"=>$newCompanyID,
                 "fields"=>[
